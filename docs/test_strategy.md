@@ -34,14 +34,12 @@ The purpose of this strategy is to describe how the PyQuiz project is tested and
 ## Out of Scope
 - performance testing
 - security testing
-- browser testing
-- database testing
-- API testing
+- database testing (not applicable, as the application does not use a database)
 
 ## Test Approach
 - use `unittest` as the unit testing framework
 - use `unittest.mock` to isolate dependencies
-- run tests locally in the Python virtual environment
+- run tests locally in the Python virtual environment using `python -m unittest discover`
 - manually run the application from the terminal to verify the console flow
 
 ## Entry Criteria
@@ -52,15 +50,15 @@ The purpose of this strategy is to describe how the PyQuiz project is tested and
 ## Exit Criteria
 - all planned unit tests pass
 - no blocking defects remain in the tested functionality
-- documentation and implementation are aligned
+- documentation and implementation are verified to be aligned through code review
 
 ## Tools
-- Python 3.13
+- Python 3
 - `unittest`
 - `unittest.mock`
 - GitHub
 
 ## Risks
 - documentation may describe behavior not implemented in code
-- random behavior can make tests unstable if not isolated
-- console-based behavior must be validated carefully because no web UI exists
+- random behavior can make tests unstable if not isolated; mitigate by using mocks for randomness in tests
+- console-based behavior must be validated carefully
