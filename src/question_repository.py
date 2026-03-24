@@ -1,7 +1,4 @@
-try:
-    from .question import Question
-except ImportError:
-    from question import Question
+from .question import Question
 
 
 class QuestionRepository:
