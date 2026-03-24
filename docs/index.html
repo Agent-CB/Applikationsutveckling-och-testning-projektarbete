@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PyQuiz Project</title>
+    <style>
+        :root {
+            --bg: #f4f1ea;
+            --panel: #fffdf8;
+            --text: #1f2933;
+            --accent: #0f766e;
+            --accent-dark: #115e59;
+            --muted: #52606d;
+            --border: #d9e2ec;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            font-family: Georgia, "Times New Roman", serif;
+            background: linear-gradient(180deg, #f9f7f2 0%, #efe8dc 100%);
+            color: var(--text);
+        }
+
+        .wrapper {
+            max-width: 960px;
+            margin: 0 auto;
+            padding: 48px 20px 64px;
+        }
+
+        .hero {
+            background: var(--panel);
+            border: 1px solid var(--border);
+            border-radius: 18px;
+            padding: 40px 28px;
+            box-shadow: 0 14px 40px rgba(31, 41, 51, 0.08);
+        }
+
+        h1,
+        h2 {
+            margin-top: 0;
+            line-height: 1.1;
+        }
+
+        h1 {
+            font-size: clamp(2.4rem, 6vw, 4.6rem);
+            margin-bottom: 16px;
+            color: var(--accent-dark);
+        }
+
+        h2 {
+            font-size: 1.5rem;
+            margin-bottom: 12px;
+        }
+
+        p {
+            line-height: 1.7;
+            font-size: 1.05rem;
+        }
+
+        .lead {
+            max-width: 700px;
+            font-size: 1.15rem;
+            color: var(--muted);
+        }
+
+        .actions {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+            margin-top: 24px;
+        }
+
+        .button {
+            display: inline-block;
+            padding: 12px 18px;
+            border-radius: 999px;
+            text-decoration: none;
+            font-weight: 700;
+            border: 1px solid var(--accent);
+        }
+
+        .button.primary {
+            background: var(--accent);
+            color: #ffffff;
+        }
+
+        .button.secondary {
+            color: var(--accent-dark);
+            background: transparent;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+            gap: 18px;
+            margin-top: 28px;
+        }
+
+        .card {
+            background: var(--panel);
+            border: 1px solid var(--border);
+            border-radius: 16px;
+            padding: 20px;
+            box-shadow: 0 10px 28px rgba(31, 41, 51, 0.05);
+        }
+
+        ul {
+            padding-left: 20px;
+            margin: 0;
+        }
+
+        li {
+            margin-bottom: 8px;
+            line-height: 1.6;
+        }
+
+        .footer {
+            margin-top: 36px;
+            color: var(--muted);
+            font-size: 0.95rem;
+        }
+
+        code {
+            background: #edf2f7;
+            padding: 2px 6px;
+            border-radius: 6px;
+        }
+    </style>
+</head>
+<body>
+    <main class="wrapper">
+        <section class="hero">
+            <h1>PyQuiz</h1>
+            <p class="lead">
+                PyQuiz is a console-based software testing project built in Python. The
+                project demonstrates modular design, dependency injection, unit testing,
+                mocking, GitHub workflow, and testing documentation.
+            </p>
+            <div class="actions">
+                <a class="button primary" href="https://github.com/Agent-CB/Applikationsutveckling-och-testning-projektarbete">View Repository</a>
+                <a class="button secondary" href="./test_report.md">Open Test Report</a>
+            </div>
+        </section>
+
+        <section class="grid">
+            <article class="card">
+                <h2>Project Focus</h2>
+                <ul>
+                    <li>Console quiz application in Python</li>
+                    <li>Unit testing with <code>unittest</code></li>
+                    <li>Mocking with <code>unittest.mock</code></li>
+                    <li>Structured modules in <code>src/</code> and <code>tests/</code></li>
+                </ul>
+            </article>
+
+            <article class="card">
+                <h2>Main Modules</h2>
+                <ul>
+                    <li><code>QuizEngine</code></li>
+                    <li><code>QuestionRepository</code></li>
+                    <li><code>QuestionOrderService</code></li>
+                    <li><code>AnswerParser</code></li>
+                    <li><code>ScoreService</code></li>
+                </ul>
+            </article>
+
+            <article class="card">
+                <h2>How It Is Tested</h2>
+                <ul>
+                    <li>Automated unit tests for services and quiz flow</li>
+                    <li>Manual run of <code>python -m src.main</code></li>
+                    <li>Input validation and score handling verification</li>
+                    <li>Randomized question order tested in isolation</li>
+                </ul>
+            </article>
+        </section>
+
+        <section class="grid">
+            <article class="card">
+                <h2>Documentation</h2>
+                <ul>
+                    <li><a href="./project_charter.md">Project Charter</a></li>
+                    <li><a href="./user_stories.md">User Stories</a></li>
+                    <li><a href="./test_strategy.md">Test Strategy</a></li>
+                    <li><a href="./test_plan.md">Test Plan</a></li>
+                    <li><a href="./test_cases.md">Test Cases</a></li>
+                    <li><a href="./test_report.md">Test Report</a></li>
+                    <li><a href="./lessons_learned.md">Lessons Learned</a></li>
+                </ul>
+            </article>
+
+            <article class="card">
+                <h2>Presentation Notes</h2>
+                <p>
+                    The system can be demonstrated by running the automated tests and
+                    starting the console application locally.
+                </p>
+                <p>
+                    Commands used:
+                </p>
+                <ul>
+                    <li><code>python -m unittest discover -s tests</code></li>
+                    <li><code>python -m src.main</code></li>
+                </ul>
+            </article>
+        </section>
+
+        <p class="footer">
+            Group 1, course GIK36R. This page is a lightweight overview for the GitHub
+            Pages deployment. The main implementation remains a console application.
+        </p>
+    </main>
+</body>
+</html>
